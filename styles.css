@@ -74,16 +74,16 @@ body {
     width: 100%;
 }
 
-.menu-toggle {
+#menu-btn {
     display: none;
     padding-right: 30px;
     color: #333;
     transition: color 0.3s ease;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 2rem;
 }
 
-.menu-toggle:hover{
+#menu-btn:hover{
     color: #888;
 }
 
@@ -93,7 +93,7 @@ body {
         width: 100px;
     }
     
-    #menu-toggle {
+    #menu-btn {
         display: block;
     }
     
@@ -101,13 +101,12 @@ body {
         position: fixed;
         top: 100px;
         left: -100%;
-        width: 100%;
+        width: 50%;
         height: calc(100vh - 70px);
         background-color: #333;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         transition: left 0.3s ease;
     }
@@ -122,17 +121,13 @@ body {
         text-align: center;
         padding: 15px 0;
         margin-bottom: 15px;
-        border-radius: 10px;
+        border-radius: 5px;
+        font-size: 1.2rem;
     }
 
     #nav-links a:hover{
         background-color: #888;
         color: white;
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-        margin-bottom: 15px;
-        border-radius: 10px;
     }
 
     #nav-links a::after {
@@ -140,6 +135,6 @@ body {
     }
 
     #nav-links li{
-        width: 60%;
+        width: 90%;
     }
 }
