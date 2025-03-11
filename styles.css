@@ -1,3 +1,81 @@
-*{
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-size: 12px;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 400px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+#logo {
+    width: 125px;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+}
+
+#nav-links li {
+    margin: 0 25px;
+}
+
+#nav-links a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: #888;
+    width: 100%;
+}
+
+#nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #888;
+    transition: width 0.3s ease-in-out;
+}
+
+#nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    color: #333;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu-toggle:hover{
+    color: #888;
 }
