@@ -1,4 +1,6 @@
 /* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -86,6 +88,31 @@ body {
 #menu-btn:hover{
     color: #888;
 }
+
+/* Image Slider
+.italianno-regular{
+    position: relative;
+    top: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: fit-content;
+    font-family: Italianno;
+    font-weight: 400;
+    font-size: 5rem;
+    color: white;
+    background-color: #3333337d;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.slider-frame{
+    overflow: hidden;
+    height: 800px;
+    width:1200px;
+    margin-left: 360px;
+    margin-top: 20px;
+}
+*/
 
 /* Mobile Responsive Styles */
 @media (max-width: 1100px) {
