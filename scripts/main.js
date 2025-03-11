@@ -13,16 +13,50 @@ document.querySelectorAll('#nav-links a').forEach(link => {
     });
 });
 
-// Image Slider
-const slides = document.querySelector('#slides');
-let index = 0;
-
-function nextSlide() {
-    index++;
-    if (index >= slides.children.length) {
-        index = 0; // Reset to first image
+// Countdown Timer Function
+function updateCountdown() {
+    const weddingDate = new Date("April 4, 2026 00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = weddingDate - now;
+    
+    // Time calculations
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+    const countdownContainer = document.getElementById("countdown-container");
+            
+    // If the countdown is over
+    if (timeLeft < 0) {
+        countdownContainer.innerHTML = "<div class='countdown-number'>Dit is die groot dag!</div>";
+        return;
     }
-    slides.style.transform = `translateX(-${index * 100}%)`;
+    
+    // Set the content of the countdown with properly structured items
+    countdownContainer.innerHTML = `
+    <div class="countdown-item">
+        <div class="countdown-number">${days}</div>
+        <div class="countdown-label">Dae</div>
+    </div>
+    <div class="separator">:</div>
+    <div class="countdown-item">
+        <div class="countdown-number">${hours}</div>
+        <div class="countdown-label">Ure</div>
+    </div>
+    <div class="separator">:</div>
+    <div class="countdown-item">
+        <div class="countdown-number">${minutes}</div>
+        <div class="countdown-label">Minute</div>
+    </div>
+    <div class="separator">:</div>
+    <div class="countdown-item">
+        <div class="countdown-number">${seconds}</div>
+        <div class="countdown-label">Sekondes</div>
+    </div>
+    `; 
 }
 
-setInterval(nextSlide, 2000); // Change image every 2 seconds
+// Update the countdown every second
+updateCountdown(); // Run once immediately
+const timerInterval = setInterval(updateCountdown, 1000);
