@@ -60,3 +60,29 @@ function updateCountdown() {
 // Update the countdown every second
 updateCountdown(); // Run once immediately
 const timerInterval = setInterval(updateCountdown, 1000);
+
+// Scroll reveal function
+document.addEventListener('DOMContentLoaded', function() {
+    const storySection = document.querySelector('.story-section');
+    
+    // Function to check if an element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+        );
+    }
+    
+    // Function to handle scroll events
+    function handleScroll() {
+        if (isInViewport(storySection) && !storySection.classList.contains('visible')) {
+            storySection.classList.add('visible');
+        }
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Check initial state (in case the section is already in view)
+    handleScroll();
+});
