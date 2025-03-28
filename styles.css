@@ -1,5 +1,11 @@
-/* Reset and base styles */
+/* Base styles */
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+:root {
+    --primary-color: #f5f5f5;
+    --secondary-color: #888;
+    --text-color: #333;
+}
 
 * {
     margin: 0;
@@ -10,8 +16,15 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
-    color:#333;
+    color: var(--text-color);
     font-size: 16px;
+}
+
+.heading {
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    font-size: clamp(20px, 10vw, 100px);
+    text-align: center;
 }
 
 /* Navigation bar */
@@ -19,7 +32,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: white;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,13 +58,13 @@ body {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 #nav-links a:hover {
-    color: #888;
+    color: var(--secondary-color)
 }
 
 #nav-links a::after {
@@ -61,7 +74,7 @@ body {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #888;
+    background-color: var(--secondary-color);
     transition: width 0.3s ease-in-out;
 }
 
@@ -72,14 +85,14 @@ body {
 #menu-btn {
     display: none;
     padding-right: 30px;
-    color: #333;
+    color: var(--text-color);
     transition: color 0.3s ease;
     cursor: pointer;
     font-size: 1.5rem;
 }
 
 #menu-btn:hover{
-    color: #888;
+    color: var(--secondary-color);
 }
 
 /* Image Slider */
@@ -142,7 +155,7 @@ img{
 }
 
 /* Hero section with background */
-.section {
+.hero {
     position: absolute;
     top: 125px;
     display: flex;
@@ -151,17 +164,7 @@ img{
     left: 50%;
     transform: translateX(-50%);
     z-index: 900;
-}
-
-.index{
     padding: 0 20px;
-}
-
-.italianno-regular {
-    font-family: 'Italianno', cursive;
-    font-weight: 400;
-    font-size: clamp(20px, 10vw, 100px);
-    text-align: center;
 }
 
 .hero-heading{
@@ -232,11 +235,20 @@ img{
 }
 
 /*Time and Place styles*/
+.time-location{
+    position: absolute;
+    top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 900;
+}
+
 .time{
     margin-bottom: 20px;
 }
-
-
 
 .time-location > div > p{
     font-size: clamp(1rem, 5vw, 2rem);
@@ -276,7 +288,7 @@ img{
     }
     
     #nav-links a {
-        background-color: white;
+        background-color: var(--primary-color);
         width: 100%;
         text-align: center;
         padding: 15px 0;
@@ -286,7 +298,7 @@ img{
     }
 
     #nav-links a:hover{
-        background-color: #888;
+        background-color: var(--secondary-color);
         color: white;
     }
 
@@ -294,7 +306,7 @@ img{
         display: none;
     }
 
-    .hero {
+    .index {
         top: 100px;
         padding: 0 10px
     }
