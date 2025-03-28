@@ -101,7 +101,6 @@ body {
     margin: auto;
     position: relative;
     height: 100vh;
-    width: 100vw;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -109,8 +108,7 @@ body {
 
 .slide-track{
     display: flex;
-    width: calc(66.66vh * 20);
-    column-gap: 20px;
+    width: calc(calc(100vh*(2/3)) * 20);
     animation: scroll 40s linear infinite;
 }
 
@@ -119,19 +117,21 @@ body {
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-66.66vh * 10));
+        transform: translateX(calc(calc(-100vh*(2/3)) * 10));
     }
 }
 
 .slide{
-    max-width: 66.66vh;
+    height: 100vh;
+    width: calc(100vh*(2/3));
     display: flex;
     align-items: center;
-    padding: 15px;
 }
 
-img{
-    width: 66.66vh;
+.slide img{
+    padding: 0 15px;
+    height: 100vh;
+    width: 100%;
 }
 
 /* Gradient Shadows */
