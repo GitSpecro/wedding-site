@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 :root {
-    --primary-color: #f5f5f5;
+    --primary-color: white;
     --secondary-color: #888;
     --text-color: #333;
 }
@@ -14,16 +14,17 @@
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--primary-color);
     font-size: 16px;
 }
 
 .heading {
     font-family: 'Italianno', cursive;
     font-weight: 400;
-    font-size: clamp(20px, 10vw, 100px);
+    font-size: clamp(25px, 10vw, 100px);
     text-align: center;
 }
 
@@ -99,7 +100,8 @@ body {
 .slider{
     margin: auto;
     position: relative;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -107,7 +109,8 @@ body {
 
 .slide-track{
     display: flex;
-    width: calc(clamp(300px, 80vw, 600px) * 20);
+    width: calc(66.66vh * 20);
+    column-gap: 20px;
     animation: scroll 40s linear infinite;
 }
 
@@ -116,19 +119,19 @@ body {
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(clamp(-300px, -80vw, -600px) * 10));
+        transform: translateX(calc(-66.66vh * 10));
     }
 }
 
 .slide{
-    max-width: 600px;
+    max-width: 66.66vh;
     display: flex;
     align-items: center;
     padding: 15px;
 }
 
 img{
-    width: 100%;
+    width: 66.66vh;
 }
 
 /* Gradient Shadows */
@@ -157,12 +160,12 @@ img{
 /* Hero section with background */
 .hero {
     position: absolute;
-    top: 125px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 900;
     padding: 0 20px;
 }
@@ -212,7 +215,7 @@ img{
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    padding: 50px 5%;
+    padding: 20vh 5vw;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -227,14 +230,14 @@ img{
     font-family: 'Italianno', cursive;
     font-weight: 400;
     font-style: italic;
-    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+    font-size: clamp(25px, 10vw, 100px);; /* Responsive font size */
 }
 
 .story-section p{
     font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
-/*Time and Place styles*/
+/*Time and Location styles*/
 .time-location{
     position: absolute;
     top: 125px;
@@ -243,7 +246,7 @@ img{
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 900;
+    padding: 0 20px;
 }
 
 .time{
@@ -306,12 +309,12 @@ img{
         display: none;
     }
 
-    .index {
+    .time-loction {
         top: 100px;
         padding: 0 10px
     }
 
     .story-section {
-        padding: 30px 5%;
+        padding: 5vh 5%;
     }
 }
