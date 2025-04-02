@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--primary-color);
@@ -215,10 +215,9 @@ body {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    padding: 20vh 5vw;
     text-align: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20vh auto;
 }
 
 .story-section.visible {
@@ -234,7 +233,7 @@ body {
 }
 
 .story-section p{
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(0.75rem, 5vw, 1.5rem);
 }
 
 /*Time and Location styles*/
@@ -246,7 +245,6 @@ body {
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0 20px;
 }
 
 .time{
@@ -255,7 +253,7 @@ body {
 
 .time-location > div > p{
     font-size: clamp(1rem, 5vw, 2rem);
-    text-align: center;
+    text-align: left;
 }
 
 /* Mobile Responsive Styles */
@@ -315,6 +313,6 @@ body {
     }
 
     .story-section {
-        padding: 5vh 5%;
+        margin: 5vh auto;
     }
 }
