@@ -416,16 +416,17 @@ body {
 .gallery{
     padding: 40px 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    width: 100%;
 }
 
 .column{
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 300px;
     gap: 20px;
 }
 
