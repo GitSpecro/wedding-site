@@ -244,26 +244,20 @@ body {
     max-width: 1000px;
 }
 
+.time-location-container{
+    margin-top: 100px;
+    height: calc(100vh - 100px);
+}
+
 /*Time and Location styles*/
 .time-location {
-    position: absolute;
-    bottom: 0;
-    height: calc(100vh - 100px);
-    width: 100vw;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5vw;
-    padding: 30px
-}
-
-.time-location-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    gap: 4vw;
+    padding: 20px;
     background-image: url('images/time-location-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -441,19 +435,17 @@ body {
 
 .accommodation-container{
     margin-top: 100px;
+    height: calc(100vh - 100px);
 }
 
 .card-container{
-    position: absolute;
-    bottom: 0;
-    height: calc(100vh - 100px);
+    height: 100%;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     overflow-x: hidden;
-    gap: 0;
 }
 
 .card{
