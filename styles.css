@@ -324,19 +324,16 @@ body {
 /* Schedule styles */
 .timeline-container{
     margin-top: 100px;
-    background-image: url('images/image-19.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
 }
 
 .timeline-container h1 {
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
     text-align: center;
     font-family: 'Italianno', cursive;
     font-weight: 400;
     font-style: italic;
     font-size: clamp(25px, 10vw, 100px);
+    color: var(--text-color);
 }
 
 .timeline{
@@ -351,8 +348,14 @@ body {
     margin-bottom: 1rem;
 }
 
+.timeline-component-left{
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+}
+
 .timeline-component-bg{
-    padding: 0.75rem;
+    padding: 0.5rem;
     background-color: rgba(70, 70, 70, 0.8);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -377,10 +380,9 @@ body {
 .timeline-time{
     font-size: clamp(1rem, 3vw, 1.5rem);
     margin-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     color: var(--text-color);
     border-radius: 10px;
+    width: fit-content;
 }
 
 .timeline-component-bg p{
@@ -394,6 +396,7 @@ body {
 .timeline-time-right{
     text-align: right;
     margin-right: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .timeline-middle{
@@ -465,13 +468,11 @@ body {
 /* Accommodation styles */
 .accommodation-container{
     margin-top: 100px;
-    height: calc(100vh - 100px);
-    overflow-x: hidden;
-    background-image: url('images/image-4.jpg');
+    /* background-image: url('images/image-36.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 .accommodation-container h1 {
@@ -481,7 +482,7 @@ body {
     font-weight: 400;
     font-style: italic;
     font-size: clamp(25px, 10vw, 100px);
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .card-container{
@@ -541,6 +542,11 @@ body {
     color: var(--primary-color);
 }
 
+.card-content .btn:active {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
 .card-content p span{
     font-weight: bold;
 }
@@ -548,24 +554,23 @@ body {
 /* Important Info styles */
 .info-container{
     margin-top: 100px;
-    background-image: url('images/image-6.jpg');
+    /* background-image: url('images/image-6.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
     background-attachment: fixed;
     height: calc(100vh - 100px);
-    overflow-x: hidden;
+    overflow-x: hidden; */
 }
 
 .wrapper{
-    max-width: 75%;
-    width: clamp(300px, 75vw, 900px);
+    width: clamp(350px, 75vw, 900px);
     margin: auto;
 }
 
 .wrapper h1 {
-    color: var(--primary-color);
-    padding: 1.5rem 0;
+    color: var(--text-color);
+    padding-top: 1.5rem;
     text-align: center;
     font-family: 'Italianno', cursive;
     font-weight: 400;
@@ -577,7 +582,7 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
     cursor: pointer;
-    font-size: clamp(0.75rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     width: 100%;
     padding: 1rem;
     border: none;
@@ -590,7 +595,7 @@ body {
 }
 
 .accordion i{
-    font-size: clamp(0.75rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .active, .accordion:hover{
@@ -607,7 +612,7 @@ body {
 .pannel p{
     color: var(--text-color);
     background-color: rgb(237, 237, 237);
-    font-size: clamp(0.75rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .info{
@@ -617,6 +622,67 @@ body {
 
 .info.active{
     border: none;
+}
+
+/* RSVP styles */
+.rsvp-container{
+    margin-top: 100px;
+    padding: 1.5rem;
+    height: calc(100vh - 100px);
+}
+
+.rsvp-container h1{
+    text-align: center;
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(37px, 10vw, 100px);
+    color: var(--text-color);
+}
+
+.rsvp-container h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--text-color);
+}
+
+.rsvp-list{
+    width: fit-content;
+    margin: auto;
+}
+
+.rsvp-list ul{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding-left: 20px;
+    list-style: square;
+}
+
+.btn-container{
+    display: flex;
+    margin-top: 20px;
+}
+
+.btn-container a{
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.btn-container a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-container a:active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Mobile Responsive Styles */
