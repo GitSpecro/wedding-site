@@ -21,6 +21,16 @@ body {
     font-size: 16px;
 }
 
+.page-heading{
+    padding-top: 1.5rem;
+    text-align: center;
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(25px, 10vw, 100px);
+    color: var(--text-color);
+}
+
 .heading {
     font-family: 'Italianno', cursive;
     font-weight: 400;
@@ -166,7 +176,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     z-index: 900;
     padding: 0 10px;
     height: calc(100vh - 100px);
@@ -236,7 +246,7 @@ body {
     font-family: 'Italianno', cursive;
     font-weight: 400;
     font-style: italic;
-    font-size: clamp(25px, 10vw, 100px); /* Responsive font size */
+    font-size: clamp(25px, 10vw, 100px);
 }
 
 .story-section p{
@@ -325,32 +335,22 @@ body {
     margin-top: 100px;
 }
 
-.timeline-container h1 {
-    padding-top: 1.5rem;
-    text-align: center;
-    font-family: 'Italianno', cursive;
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(25px, 10vw, 100px);
-    color: var(--text-color);
-}
-
 .timeline{
     margin: 0 auto;
     max-width: 750px;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 3px 1fr;
 }
 
 .timeline-component{
     margin-bottom: 1rem;
+    align-self: top;
 }
 
 .timeline-component-left{
     display: flex;
     justify-content: flex-end;
-    height: fit-content;
 }
 
 .timeline-component-bg{
@@ -358,8 +358,6 @@ body {
     background-color: rgba(70, 70, 70, 0.8);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    width: fit-content;
-    place-self: center;
 }
 
 .timeline-component-bg-left{
@@ -380,8 +378,6 @@ body {
     font-size: clamp(1rem, 3vw, 1.5rem);
     margin-left: 1rem;
     color: var(--text-color);
-    border-radius: 10px;
-    width: fit-content;
 }
 
 .timeline-component-bg p{
@@ -393,9 +389,7 @@ body {
 }
 
 .timeline-time-right{
-    text-align: right;
     margin-right: 1rem;
-    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .timeline-middle{
@@ -422,15 +416,6 @@ body {
 /* Gallery styles */
 .gallery-container{
     margin-top: 100px;
-}
-
-.gallery-container h1 {
-    padding-top: 1.5rem;
-    text-align: center;
-    font-family: 'Italianno', cursive;
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(25px, 10vw, 100px);
 }
 
 .grid-gallery {
@@ -628,22 +613,26 @@ body {
     margin-top: 100px;
     padding: 1.5rem;
     height: calc(100vh - 100px);
-}
-
-.rsvp-container h1{
-    text-align: center;
-    font-family: 'Italianno', cursive;
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(37px, 10vw, 100px);
-    color: var(--text-color);
+    background-image: url('images/image-84.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
 }
 
 .rsvp-container h2{
     text-align: center;
     font-weight: bold;
     font-size: clamp(1rem, 3vw, 1.5rem);
-    color: var(--text-color);
+    color: var(--primary-color);
+    border-bottom: solid 3px var(--primary-color);
+}
+
+.rsvp-list-container{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(70, 70, 70, 0.8);
+    border-radius: 10px;
 }
 
 .rsvp-list{
@@ -655,33 +644,24 @@ body {
     font-size: clamp(1rem, 3vw, 1.5rem);
     padding-left: 20px;
     list-style: square;
+    color: var(--primary-color);
 }
 
 .btn-container{
     display: flex;
     margin-top: 20px;
+    height: 25vh;
 }
 
 .btn-container a{
     padding: 8px 16px;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 5px;
     margin: auto;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-.btn-container a:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
-
-.btn-container a:active {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
 }
 
 /* Mobile Responsive Styles */
@@ -700,7 +680,7 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         transition: left 0.3s ease;
     }
     
