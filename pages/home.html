@@ -1,0 +1,142 @@
+<!-- Image Slider -->
+<div class="slider">
+    <div class="slide-track">  
+        <div class="slide">
+            <img src="images/image-1.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-2.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-3.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-4.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-5.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-6.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-7.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-8.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-9.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-10.jpg">
+        </div>
+
+        <div class="slide">
+            <img src="images/image-1.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-2.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-3.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-4.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-5.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-6.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-7.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-8.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-9.jpg">
+        </div>
+        <div class="slide">
+            <img src="images/image-10.jpg">
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1 class="heading title">Rohan & Elré Trou!</h1>
+    <div class="date-time">
+        <p class="heading">04/04/2026</p>
+        <div class="countdown-container" id="countdown-container"></div>
+    </div>
+    <div class="index-btn-container">
+        <a href="#" onclick="loadPage('rsvp.html')">RSVP</a>
+    </div>
+</section>
+
+<!-- Story Section -->
+<section class="story-section">
+    <h2 class="story-title">Ons Storie:</h2>
+    <p>
+        Saam geskryf in die mooiste hoofstuk.<br>
+        Dit het alles in April 2020 begin, ’n gesprek wat ’n storie geword het.
+        ’n Jaar van langafstand het ons liefde net sterker gemaak, en toe ons paaie in 2022 saamgevou het, het ons begin bou aan iets besonders.
+        Deur hoogte- en laagtepunte, deur lag en trane, het ons mekaar leer ken op maniere wat woorde nie kan vasvang nie.
+        Ons is nie net lief vir mekaar nie; ons bring die beste in mekaar na vore.
+        Bo alles is ons saam geanker in ons geloof, dit is ons fondament, ons rigtingwyser, en dit waarop ons wil voortbou wanneer ons in die huwelik tree.
+        Ons sien met opgewondenheid uit om hierdie spesiale dag te vier saam met ons naastes, maar ons weet ook dat dié wat nie meer hier is nie, vanuit die hemel saam met ons gelukkig sal wees.<br>
+        Kom vier hierdie spesiale dag saam met ons!
+    </p>
+</section>
+
+<script>
+    // Countdown Timer Function
+    function updateCountdown() {
+        const weddingDate = new Date("April 4, 2026 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+        
+        // Time calculations
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        const countdownContainer = document.getElementById("countdown-container");
+                
+        // If the countdown is over
+        if (timeLeft < 0) {
+            countdownContainer.innerHTML = "<div class='countdown-number'>Dit is die groot dag!</div>";
+            return;
+        }
+
+        // Set the content of the countdown with properly structured items
+        countdownContainer.innerHTML = `
+        <div class="countdown-item">
+            <div class="countdown-number">${days}</div>
+            <div class="countdown-label">Dae</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="countdown-item">
+            <div class="countdown-number">${hours}</div>
+            <div class="countdown-label">Ure</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="countdown-item">
+            <div class="countdown-number">${minutes}</div>
+            <div class="countdown-label">Minute</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="countdown-item">
+            <div class="countdown-number">${seconds}</div>
+            <div class="countdown-label">Sekondes</div>
+        `;
+    }
+
+    // Update the countdown every second
+    updateCountdown(); // Run once immediately
+    setInterval(updateCountdown, 1000);
+</script>
