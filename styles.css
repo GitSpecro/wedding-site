@@ -41,12 +41,11 @@ body {
     border-radius: 10px;
     padding: 0 20px;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .title{
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 /* Navigation bar */
@@ -192,11 +191,6 @@ body {
     z-index: 900;
     padding: 0 10px;
     height: calc(100vh - 100px);
-}
-
-.date-time{
-    display: flex;
-    gap: 20px;
 }
 
 /* Styled countdown container */
@@ -734,14 +728,5 @@ body {
 
     .story-section {
         padding: 0 20px;
-    }
-
-    .date-time{
-        display: block;
-        gap: 20px;
-    }
-
-    .countdown-container {
-        margin-top: 20px;
     }
 } 

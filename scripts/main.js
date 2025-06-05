@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to handle scroll events
     function handleScroll() {
         const storySection = document.querySelector('.story-section');
+
+        if (storySection === null) {
+            return;
+        }
         
         if (isInViewport(storySection) && !storySection.classList.contains('visible')) {
             storySection.classList.add('visible');
