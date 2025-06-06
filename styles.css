@@ -480,6 +480,10 @@ body {
 /* Accommodation styles */
 .accommodation-container{
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 100px);
 }
 
 .accommodation-container h1 {
@@ -497,7 +501,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    overflow-x: hidden;
 }
 
 .card{
@@ -562,6 +565,9 @@ body {
 .info-container{
     margin-top: 100px;
     height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .wrapper{
@@ -751,7 +757,7 @@ footer p a{
 }
 
 @media (max-height: 600px) {
-    .hero, .story-section, .info-container, .rsvp-container{
+    .hero, .story-section, .accommodation-container{
         height: calc((100vh - 100px) * 2.3);
     }
 }
