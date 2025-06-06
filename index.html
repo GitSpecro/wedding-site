@@ -9,11 +9,12 @@
 </head>
 <body>
     <!-- Background music, hidden from user -->
-    <audio id="bgMusic" src="assets/love-story.mp3" loop style="display: none;"></audio>
+    <audio id="bg-music" src="music/love-story.mp3" loop></audio>
 
     <!-- Navigation Bar -->
     <nav id="navbar">
         <a href="#" onclick="loadPage('home.html')"><img id="logo" src="images/logo.png" alt="Rohan en Elre"></a>
+        <i id = "play-btn" class="fa-solid fa-play"></i>
         <div id="menu-btn" class="fas fa-bars"></div>
         <ul id="nav-links">
             <li><a href="#" onclick="loadPage('home.html')">Tuis</a></li>
@@ -57,6 +58,33 @@
         window.onload = () => {
             loadPage('home.html');
         }
+
+        const playBtn = document.getElementById('play-btn');
+        const bgMusic = document.getElementById('bg-music');
+        let hasInteracted = false;
+
+        function toggleAudio(musicFunction) {
+            if (!playBtn || !bgMusic) {
+                return;
+            }
+
+            if (!hasInteracted) {
+            hasInteracted = true;
+            }
+
+            if (bgMusic.paused) {
+            bgMusic.play().then(() => {
+                playBtn.className = 'fa-solid fa-pause';
+            }).catch(err => {
+                console.error("Playback failed:", err);
+            });
+            } else {
+            bgMusic.pause();
+            playBtn.className = 'fa-solid fa-play';
+            }
+        }
+
+        playBtn.addEventListener('click', toggleAudio);
     </script>
 </body>
 </html>

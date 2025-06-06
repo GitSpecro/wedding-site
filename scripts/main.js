@@ -46,18 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.classList.remove('active');
         handleScroll();
     });
-
-    const bgMusic = document.getElementById('bgMusic');
-
-    function playMusicOnce() {
-        bgMusic.play();
-        // Remove all event listeners after first interaction
-        document.removeEventListener('click', playMusicOnce);
-        document.removeEventListener('touchstart', playMusicOnce);
-        document.removeEventListener('scroll', playMusicOnce);
-    }
-
-    document.addEventListener('click', playMusicOnce);
-    document.addEventListener('touchstart', playMusicOnce);
-    document.addEventListener('scroll', playMusicOnce);
 });
