@@ -757,7 +757,7 @@ footer p a{
 }
 
 @media (max-height: 600px) {
-    .hero, .story-section, .accommodation-container{
+    .hero, .story-section, .rsvp-container, .accommodation-container{
         height: calc((100vh - 100px) * 2.3);
     }
 }
